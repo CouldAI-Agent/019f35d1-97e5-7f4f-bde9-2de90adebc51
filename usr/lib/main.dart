@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'gun_game.dart';
 
 void main() {
   runApp(const GamesHubApp());
@@ -22,6 +23,7 @@ class GamesHubApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const GamesCatalogScreen(),
+        '/gun_game': (context) => const GunGameScreen(),
       },
     );
   }
@@ -71,6 +73,14 @@ class GamesCatalogScreen extends StatelessWidget {
             onPressed: () {},
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.pushNamed(context, '/gun_game');
+        },
+        icon: const Icon(Icons.videogame_asset),
+        label: const Text('Play Target Practice'),
+        backgroundColor: Colors.green,
       ),
       body: LayoutBuilder(
         builder: (context, constraints) {
