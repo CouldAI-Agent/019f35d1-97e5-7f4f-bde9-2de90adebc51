@@ -89,7 +89,7 @@ class _GunGameScreenState extends State<GunGameScreen> with TickerProviderStateM
       context: context,
       barrierDismissible: false,
       builder: (context) => AlertDialog(
-        title: const Text('Time\\'s Up!'),
+        title: const Text("Time's Up!"),
         content: Text('Your final score: $_score'),
         actions: [
           TextButton(
